@@ -31,13 +31,15 @@ This is a cashier simulation apps that can create a transaction, adding an item 
 
 # Folder Structure
 
+```
 ├───.vscode
 ├───controllers
 ├───db
 ├───helpers
 └───models
+```
 
-vscode: vscode setup for python project
-controllers: controlling the flow of the code, calls in `main.py` and consuming the `models` and `helpers`
-models: communicating with database, query db or transact
-helpers: utils function
+1. vscode: vscode setup for python project
+2. controllers: controlling the flow of the code, calls in `main.py` and consuming the `models` and `helpers`
+3. models: communicating with database, query db or transact
+4. helpers: utils function
