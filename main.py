@@ -55,8 +55,8 @@ while IS_PLAY:
             if TRX is None:
                 print("Create the transaction first!")
                 continue
-            TRX = add_new_item(TRX)
-            print("Item added!")
+            TRX, data = add_new_item(TRX)
+            print(f"Item added: {data}")
 
         case "4":
             if TRX is None:
@@ -92,11 +92,11 @@ while IS_PLAY:
             if TRX is None:
                 print("Create the transaction first!")
                 continue
-            TRX = delete_item(TRX)
+            TRX, data = delete_item(TRX)
             if TRX is None:
                 print("Unable to delete item! Item not found!")
                 continue
-            print("Item deleted!")
+            print(f"Item deleted!: {data}")
 
         case "8":
             if TRX is None:
@@ -134,6 +134,8 @@ while IS_PLAY:
                 continue
             total = total_price(item)
             print(total)
+            print("----------------")
+            print(print_table(item))
             print("\n")
 
         case "12" | "":

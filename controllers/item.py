@@ -18,7 +18,9 @@ def add_new_item(trx: Transaction):
     )
 
     trx.add_item(item=item)
-    return trx
+    data = {}
+    data[item_name] = [item_qty, item_price]
+    return trx, data
 
 
 def update_item_price(trx: Transaction):
@@ -64,8 +66,12 @@ def delete_item(trx: Transaction):
     if item is None:
         return None
 
+    result = trx.get_item(item_name)
     trx.delete_item(name=item_name)
-    return trx
+
+    data = {}
+    data[item_name] = [result[2], result[3]]
+    return trx, data
 
 
 def delete_all_item(trx: Transaction):
