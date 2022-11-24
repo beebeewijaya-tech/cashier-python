@@ -5,8 +5,8 @@ This is a cashier simulation apps that can create a transaction, adding an item 
 # How to run the project
 
 ```
-    pip3 install requirements.txt
-    python3 main.py
+pip3 install -r requirements.txt
+python3 main.py
 ```
 
 # Menu
